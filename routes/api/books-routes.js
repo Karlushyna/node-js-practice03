@@ -2,6 +2,10 @@ const express = require("express");
 
 const ctrl = require("../../controllers/books-controllers");
 
+const {validateBody} = require("../../utils");
+
+const schemas = require("../../schemas/books");
+
 const books = require("../../models/books");
 
 
@@ -13,9 +17,9 @@ router.get("/", ctrl.getAllBooks);
 
 router.get("/:id", ctrl.getBookById);
 
-router.post("/", ctrl.addBook);
+router.post("/", validateBody(schemas.addSchema), ctrl.addBook);
 
-router.put("/:id", ctrl.updateBookById);
+router.put("/:id", validateBody(schemas.addSchema), ctrl.updateBookById);
 
 router.delete("/:id", ctrl.deleteBookById);
 
