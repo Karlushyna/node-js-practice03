@@ -10,12 +10,12 @@ const router = express.Router();
 
 router.get("/", ctrl.getAllBooks);
 
-router.get("/:id", ctrl.getBookById);
+// router.get("/:id", ctrl.getBookById);
 
-router.post("/", validateBody(schemas.addSchema), ctrl.addBook);
+// router.post("/", validateBody(schemas.addSchema), ctrl.addBook);
 
-router.put("/:id", validateBody(schemas.addSchema), ctrl.updateBookById);
+// router.put("/:id", validateBody(schemas.addSchema), ctrl.updateBookById);
 
-router.delete("/:id", ctrl.deleteBookById);
+// router.delete("/:id", ctrl.deleteBookById);
 
 module.exports = router;
