@@ -6,12 +6,7 @@ const {validateBody} = require("../../utils");
 
 const schemas = require("../../schemas/books");
 
-const books = require("../../models/books");
-
-
 const router = express.Router();
-
-
 
 router.get("/", ctrl.getAllBooks);
 
